@@ -1,0 +1,9 @@
+¿Los lados de un triángulo equilátero son diferentes? a) verdadero b) falso
+Sin usar calculadora, cuál es el resultado de 2 elevado a la 4 a) 8 b) 14 c) 16
+Evalúe la siguiente operación: 6 + 3 x 5.  a) 45 b) 34 c) 21
+32 dividido entre 2x es igual a 4. ¿Cuál es el valor de x?  a) 4 b) 54 c) 12
+¿Los catetos individualmente son menores a la hipotenusa?  a) verdadero b) falso 
+Monse y Renata realizaron una compra de $345 pesos, si el señor de la tienda les ofreció un 10% de descuento, ¿cuánto pagarán Monse y Renata? a) 34.5 b) 310.5 c) 65
+¿Cuál sería la hipotenusa de un triángulo con ángulo de 90° con lados de 36cm y 48cm? a) 42 b) 60 c)78
+¿Cuántos grados equivalen a pi rad?  a) 78° b) 180° c) 360°
+¿cuáles son los dos valores de x en la siguiente ecuación? 3x^2 +5x - 6. (tip: usa la ecuación cuadrática)  a) 0.80 y -2.47 b) 0.35 y 3.45 c) 2.6 y -0.90
