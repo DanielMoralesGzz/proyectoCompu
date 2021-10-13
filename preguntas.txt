@@ -1,0 +1,3 @@
+¿Cuál es el planeta más grande del sistema solar? a)tierra b)jupiter c)venus
+¿Es el cambio de posición con respecto al tiempo? a)direccion b)velocidad aceleracion
+¿Es el cambio de velocidad con respecto al tiempo? a)aceleracion b)posicion c)El teorema de pitagoras
