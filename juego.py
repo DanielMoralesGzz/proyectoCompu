@@ -24,3 +24,4 @@ while menu!=0:
         archivo1.close()
         print('Tu puntaje fue de',cont,)
 print('Gracias por jugar, hasta luego')
+print('hpla')
