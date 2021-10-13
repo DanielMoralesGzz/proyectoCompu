@@ -13,17 +13,19 @@ while menu!=0:
       opt = int(input())
       print('ADVERTENCIA: favor de indicar su respuesta solamente con la letra correcta y en minuscula, gracias y buena suerte.')
       if opt == 1:
-          archivo=open('preguntas.txt',encoding='utf-8-sig')
-          archivo1=open('respuestas.txt') 
+          archivo=open('preguntas.txt','r',encoding='utf-8-sig')
+          archivo1=open('respuestas.txt','r',encoding='utf-8-sig') 
           cont=0
           for i in archivo:
               print(i,end='')
-              respuesta=input()
+              respuesta=str(input())
               a=archivo1.readline()
+              print(a)
               if respuesta==a:
                   cont+=3
               else:
                   cont-=1
+              print(cont)
           archivo.close()
           archivo1.close()
           print('Tu puntaje fue de', cont)
