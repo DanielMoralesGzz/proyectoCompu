@@ -2,6 +2,9 @@ print('Hola, bienvendi@ a el juego. Escoge una de las siguientes opciones:\n1-Re
 menu=1
 
 while menu!=0:
+    listaCiencia = []
+    listaMate = []
+    listaLec = []
     menu=int(input())
     if menu==1:
         archivo=open('Reglas.txt', 'r')
@@ -43,6 +46,7 @@ while menu!=0:
               print('Barra de experiencia: (////////  )')
           elif 31>cont and cont>25:
               print('Barra de experiencia: (//////////)')
+          listaCiencia.append(cont)
           
           print('Has completado el módulo de Ciencias. Escoge nuevamente una de las siguientes opciones:\n1-Reglas del juego\n2-Jugar\n3-Recursos de aprendizaje\n4-Modo Administrador\n0-Para salir del juego')
 
@@ -76,6 +80,7 @@ while menu!=0:
               print('Barra de experiencia: (////////  )')
         elif 31>cont1 and cont1>25:
               print('Barra de experiencia: (//////////)')
+        listaMate.append(cont1)
         print('Has completado el módulo de Matemáticas. Escoge nuevamente una de las siguientes opciones:\n1-Reglas del juego\n2-Jugar\n3-Recursos de aprendizaje\n4-Modo Administrador\n0-Para salir del juego')
 
       elif opt == 3:
@@ -107,8 +112,19 @@ while menu!=0:
               print('Barra de experiencia: (////////  )')
         elif 31>cont2 and cont2>25:
               print('Barra de experiencia: (//////////)')
+        listaLec.append(cont2)
         print('Has completado el módulo de Español. Escoge nuevamente una de las siguientes opciones:\n1-Reglas del juego\n2-Jugar\n3-Recursos de aprendizaje\n4-Modo Administrador\n0-Para salir del juego')
 
       else:
         print('Opción incorrecta')
-print('Gracias por jugar, hasta luego')
+
+ayb = input('Deseas conocer tus resultados, selecciona una opcion: a)Si  b)No = ')
+if ayb == 'a':
+    if len(listaCiencia)>0:
+        print('Resultados ciencia',listaCiencia)
+    if len(listaMate)>0:
+        print('Resultados matematicas',listaMate)
+    if len(listaLec)>0:
+        print('Resultados lectura',listaLec)
+else: 
+ print('Gracias por jugar, hasta luego')
