@@ -1,10 +1,12 @@
 print('Hola, bienvendi@ a el juego. Escoge una de las siguientes opciones:\n1-Reglas del juego\n2-Jugar\n3-Recursos de aprendizaje\n4-Modo Administrador\n0-Para salir del juego')
 menu=1
 
+listaCiencia = []
+listaMate = []
+listaLec = []
+
 while menu!=0:
-    listaCiencia = []
-    listaMate = []
-    listaLec = []
+    
     menu=int(input())
     if menu==1:
         archivo=open('Reglas.txt', 'r')
@@ -16,19 +18,17 @@ while menu!=0:
       opt = int(input())
       print('ADVERTENCIA: favor de indicar su respuesta solamente con la letra correcta y en minuscula, gracias y buena suerte.')
       if opt == 1:
-          archivo=open('preguntas.txt','r',encoding='utf-8-sig')
-          archivo1=open('respuestas.txt','r',encoding='utf-8-sig') 
+          archivo=open('preguntasCiencias.txt','r',encoding='utf-8-sig')
+          archivo1=open('respuestasCiencias.txt','r',encoding='utf-8-sig') 
           cont=0
           for i in archivo:
               print(i,end='')
               respuesta=str(input())
               a=archivo1.readline()
-              print(a)
-              if respuesta==a:
+              if respuesta==a[0]:
                   cont+=3
               else:
                   cont-=1
-              print(cont)
           archivo.close()
           archivo1.close()
           print('Tu puntaje fue de', cont)
@@ -50,7 +50,6 @@ while menu!=0:
           
           print('Has completado el módulo de Ciencias. Escoge nuevamente una de las siguientes opciones:\n1-Reglas del juego\n2-Jugar\n3-Recursos de aprendizaje\n4-Modo Administrador\n0-Para salir del juego')
 
-
       elif opt == 2:
         cont1 = 0
         archivo2 = open('preguntasMate.txt',encoding='utf-8-sig')
@@ -59,7 +58,7 @@ while menu!=0:
               print(i,end='')
               respuesta=input()
               a=archivor2.readline()
-              if respuesta==a:
+              if respuesta==a[0]:
                   cont1+=3
               else:
                   cont1-=1
@@ -91,7 +90,7 @@ while menu!=0:
               print(i,end='')
               respuesta=input()
               a=archivor3.readline()
-              if respuesta==a:
+              if respuesta==a[0]:
                   cont2+=3
               else:
                   cont2-=1
@@ -121,10 +120,10 @@ while menu!=0:
 ayb = input('Deseas conocer tus resultados, selecciona una opcion: a)Si  b)No = ')
 if ayb == 'a':
     if len(listaCiencia)>0:
-        print('Resultados ciencia',listaCiencia)
+      print('Resultados ciencia',listaCiencia)
     if len(listaMate)>0:
-        print('Resultados matematicas',listaMate)
+      print('Resultados matematicas',listaMate)
     if len(listaLec)>0:
-        print('Resultados lectura',listaLec)
+      print('Resultados lectura',listaLec)
 else: 
  print('Gracias por jugar, hasta luego')
