@@ -1,4 +1,5 @@
 print('Hola, bienvendi@ a el juego. Escoge una de las siguientes opciones:\n1-Reglas del juego\n2-Jugar\n3-Recursos de aprendizaje\n4-Modo Administrador\n0-Para salir del juego')
+print('hola')
 menu=1
 
 listaCiencia = []
