@@ -13,6 +13,7 @@ rmate='respuestasMate.txt'
 listaCiencia = []
 listaMate = []
 listaLec = []
+
 def menuPrincipal(x):
     if x == 1:
         reglas()
@@ -77,21 +78,10 @@ def checarNivel():
     for p in range(len(listaMate)):
         suma+=listaMate[p]
     print('Su puntaje total es de',suma)
-
-
+    dic={'Ciencias':listaCiencia,'Mate':listaMate,'Lectura':listaLec,'Puntaje total':suma}
+    print(dic)
 
 while menu!=0: 
     menu=int(input())
     menuPrincipal(menu)
     
-
-ayb = input('Deseas conocer tus resultados, selecciona una opcion: a)Si  b)No = ')
-if ayb == 'a':
-    if len(listaCiencia)>0:
-      print('Resultados ciencia',listaCiencia)
-    if len(listaMate)>0:
-      print('Resultados matematicas',listaMate)
-    if len(listaLec)>0:
-      print('Resultados lectura',listaLec)
-else: 
- print('Gracias por jugar, hasta luego')
