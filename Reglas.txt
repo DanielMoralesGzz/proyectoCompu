@@ -1,2 +1,6 @@
-El juego se trata de contestar preguntas para subir de nivel. 
-Mientras mas alto el nivel, mas dificiles las preguntas. Suerte!!
+¡Biénvenido a las reglas de MejoraTec! :D
+El juego cuenta con 3 diferentes módulos: ciencias, matemáticas y lectura. 
+Cada módulo tiene 10 preguntas, ¡conforme vayas avanzando las preguntas se harán más dificiles!
+Contesta las preguntas para aumentar tu desempeño y subir de nivel. 
+Puedes contestar los módulos cuantas veces quieras.
+Suerte!!
