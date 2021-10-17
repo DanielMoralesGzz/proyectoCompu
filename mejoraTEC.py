@@ -1,3 +1,6 @@
+import matplotlib.pyplot as plt
+
+
 print('Hola, bienvendi@ a el juego. Escoge una de las siguientes opciones (escribir solo el número):\n1- Reglas del juego\n2-Jugar\n3- Recursos de aprendizaje\n4- Ver nivel\n0- Salir del juego')
 menu = 1
 
@@ -13,12 +16,15 @@ rmate = 'respuestasMate.txt'
 listaCiencia = []
 listaMate = []
 listaLec = []
+listacomun = []
 
 def menuPrincipal(x):
+   
     if x == 1:
         reglas()
     elif x == 2:
         jugar()
+        
     #elif x==3:
     #    recursos()
     elif x == 4:
@@ -61,12 +67,15 @@ def materias(x, y, z):
     print('Tu puntaje fue de', cont)
     if z == 1:
         listaCiencia.append(cont)
+        listacomun.append(cont)
         mat = 'Ciencias'
     elif z == 2:
         listaMate.append(cont)
+        listacomun.append(cont)
         mat='Mate'
     elif z == 3:
         listaLec.append(cont)
+        listacomun.append(cont)
         mat = 'Lectura'
     print('Has completado el módulo de', mat, '. Escoge nuevamente una de las siguientes opciones (escribir solo el número):\n1-Reglas del juego\n2-Jugar\n3-Recursos de aprendizaje\n4-Checar nivel\n0-Salir del juego')
 
@@ -81,6 +90,12 @@ def checarNivel():
     print('Su puntaje total es de', suma)
     dic={'Ciencias' : listaCiencia, 'Mate' : listaMate, 'Lectura' : listaLec, 'Puntaje total' : suma}
     print(dic)
+    print(listacomun)
+    plt.plot(listacomun,'ro')
+    plt.xlabel('Vez jugada')
+    plt.ylabel('Puntaje obtenido')
+    plt.show()
+    plt.title('Puntajes')
     print('Escoge nuevamente una de las siguientes opciones (escribir solo el número):\n1- Reglas del juego\n2- Jugar\n3- Recursos de aprendizaje\n4- Checar nivel\n0- Salir del juego')
 
 while menu != 0: 
