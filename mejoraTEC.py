@@ -25,7 +25,7 @@ def menuPrincipal(x):
     elif x == 2:
         jugar()
         
-    #elif x==3:
+    #elif x == 3:
     #    recursos()
     elif x == 4:
         checarNivel()
@@ -57,7 +57,7 @@ def materias(x, y, z):
     for i in archivo:
         print(i, end='')
         respuesta = str(input())
-        a = archivo1.readline()
+        a = archivo1.readline().rstrip()
         if respuesta == a[0]:
             cont += 3
         else:
