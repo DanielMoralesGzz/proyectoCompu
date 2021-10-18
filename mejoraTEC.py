@@ -18,6 +18,7 @@ listaMate = []
 listaLec = []
 listacomun = []
 
+
 def menuPrincipal(x):
    
     if x == 1:
@@ -31,7 +32,7 @@ def menuPrincipal(x):
         checarNivel()
 
 def recursos():
-    print('Linkde apoyo para Mate \nhttps://www.planyprogramasdestudio.sep.gob.mx/descargables/biblioteca/secundaria/mate/1-LPM-sec-Matematicas.pdf \nLink para Ciencias \nhttps://www.planyprogramasdestudio.sep.gob.mx/descargables/biblioteca/secundaria/ciencias/1-LpM-sec-Ciencias-y-Tecnologia.pdf \nLink para Lectura \nhttps://libros.conaliteg.gob.mx/20/S00069.htm#page/20') 
+    print('Link de apoyo para Mate \nhttps://www.planyprogramasdestudio.sep.gob.mx/descargables/biblioteca/secundaria/mate/1-LPM-sec-Matematicas.pdf \nLink para Ciencias \nhttps://www.planyprogramasdestudio.sep.gob.mx/descargables/biblioteca/secundaria/ciencias/1-LpM-sec-Ciencias-y-Tecnologia.pdf \nLink para Lectura \nhttps://libros.conaliteg.gob.mx/20/S00069.htm#page/20') 
 
 
 def reglas():
@@ -84,6 +85,7 @@ def materias(x, y, z):
     print('Has completado el módulo de', mat, '. Escoge nuevamente una de las siguientes opciones (escribir solo el número):\n1-Reglas del juego\n2-Jugar\n3-Recursos de aprendizaje\n4-Checar nivel\n0-Salir del juego')
 
 def checarNivel():
+    listaveces= []
     suma = 0
     for i in range(len(listaCiencia)):
         suma += listaCiencia[i]
@@ -92,10 +94,12 @@ def checarNivel():
     for p in range(len(listaMate)):
         suma += listaMate[p]
     print('Su puntaje total es de', suma)
+    for yu in range(1,len(listacomun)+1):
+        listaveces.append(str(yu))
     dic={'Ciencias' : listaCiencia, 'Mate' : listaMate, 'Lectura' : listaLec, 'Puntaje total' : suma}
     print(dic)
     print(listacomun)
-    plt.plot(listacomun,'ro')
+    plt.bar(listaveces,listacomun,color='green')
     plt.xlabel('Vez jugada')
     plt.ylabel('Puntaje obtenido')
     plt.show()
@@ -105,4 +109,5 @@ def checarNivel():
 while menu != 0: 
     menu = int(input())
     menuPrincipal(menu)
+
     
