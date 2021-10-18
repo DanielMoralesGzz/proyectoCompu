@@ -25,11 +25,15 @@ def menuPrincipal(x):
     elif x == 2:
         jugar()
         
-    #elif x == 3:
-    #    recursos()
+    elif x == 3:
+        recursos()
     elif x == 4:
         checarNivel()
-    
+
+def recursos():
+    print('Linkde apoyo para Mate \nhttps://www.planyprogramasdestudio.sep.gob.mx/descargables/biblioteca/secundaria/mate/1-LPM-sec-Matematicas.pdf \nLink para Ciencias \nhttps://www.planyprogramasdestudio.sep.gob.mx/descargables/biblioteca/secundaria/ciencias/1-LpM-sec-Ciencias-y-Tecnologia.pdf \nLink para Lectura \nhttps://libros.conaliteg.gob.mx/20/S00069.htm#page/20') 
+
+
 def reglas():
     archivo = open('Reglas.txt', 'r', encoding = 'utf-8-sig')
     contenido = archivo.read()
