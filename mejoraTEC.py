@@ -36,6 +36,7 @@ def menuPrincipal(x): #Nuestra función del menu principal, la cuál recibe el v
 def recursos(): #Función que imprime links de recursos de aprendizaje para la lectura y el refuerzo de los conocimientos del usuario.
     print('Link de apoyo para Mate \nhttps://www.planyprogramasdestudio.sep.gob.mx/descargables/biblioteca/secundaria/mate/1-LPM-sec-Matematicas.pdf \nLink para Ciencias \nhttps://www.planyprogramasdestudio.sep.gob.mx/descargables/biblioteca/secundaria/ciencias/1-LpM-sec-Ciencias-y-Tecnologia.pdf \nLink para Lectura \nhttps://libros.conaliteg.gob.mx/20/S00069.htm#page/20') 
     #Se utilizá el retorno de carro \n para caber todo a un solo print y en diferentes líneas.
+    print(msjescoge) #se imprimirán nuevamente las opciones del menu
 
 def reglas(): #Función que nos imprime las reglas del juego, las cuales están en un archivo de texto.
     archivo = open('Reglas.txt', 'r', encoding = 'utf-8-sig') #Abrimos un archivo de texto, en modo read para solo leerlo y con encoding para poder leer acentos.
