@@ -46,17 +46,20 @@ def reglas(): #Función que nos imprime las reglas del juego, las cuales están 
 
 def jugar(): #Este es el submenu de juegos.
     print('Selecciona una opción\n1-Ciencia\n2-Matematicas\n3-Lectura')
-    opt = int(input()) #Se ingresa el tema que se quiera reforzar
+    opt = input() #Se ingresa el tema que se quiera reforzar
     print('ADVERTENCIA: favor de indicar su respuesta solamente con la letra correcta y en minuscula, gracias y buena suerte.')
-    if opt == 1: #En este caso se escoge el tema de ciencias, asi que mandamos a llama la función que corre el juego en si con las variables que establecimos en un inicio, 
+    if opt == '1': #En este caso se escoge el tema de ciencias, asi que mandamos a llama la función que corre el juego en si con las variables que establecimos en un inicio, 
+        opt = int(opt)
         materias(pciencias, rciencias, opt) #las cuáles representan los archivos que queremos abrir, y opt es la opción(tema)
-    elif opt == 2:
+    elif opt == '2':
+        opt = int(opt)#el opt lo usamos como string para que no se corte el programa y podamos corregir cuando la opción sea incorrecta
         materias(pmate, rmate, opt)
-    elif opt == 3:
+    elif opt == '3':
+        opt = int(opt)#basicamente opt se regresa a int porque usamos opt para opciones numericas
         materias(plectura, rlectura, opt)
     else:
         print('Opción incorrecta')   #Un else para indicar al usuario que su input no es correcto.
-        print(msjescoge)
+        jugar()
 
 def materias(x, y, z): #La función que se llama en la función anterior. x y y  son las variables que toman el valor que  le enviamos antes, z toma el valor de opt.
     archivo = open(x, 'r', encoding = 'utf-8-sig') #abrimos los archivos de acuerdo a las variables seleccionadas
@@ -103,14 +106,24 @@ def checarResultados(): #Funcion para pedir los resultados totales.
     dic={'Ciencias' : listaCiencia, 'Mate' : listaMate, 'Lectura' : listaLec, 'Puntaje total' : suma}
     print(dic) #Lo imprimimos
     print(listacomun)#imprimimos lista comun, la cual representa cada puntaje jugado.
-    plt.bar(listaveces,listacomun,color='green')
-    plt.xlabel('Vez jugada')
-    plt.ylabel('Puntaje obtenido')
-    plt.show()
-    plt.title('Puntajes')
+    plt.bar(listaveces,listacomun,color='green')#crea una grafica de barras con dos listas declaradas arriba
+    plt.xlabel('Vez jugada')#le pone subtitulo a la grafica en el eje x
+    plt.ylabel('Puntaje obtenido')#le pone subtitulo a la grafica en el eje y
+    plt.title('Puntajes')#da titulo a la tabla
+    plt.show()#muestra la grafica
     print(msjescoge)
 
-while menu != 0: 
-    menu = int(input())
-    menuPrincipal(menu)
+while menu != '0': 
+    menu = input()
+    
+    if menu == '1' or menu == '2' or menu == '3' or menu=='4':
+         menu = int(menu)#usamos menu como string para que en el caso de que el usuario teclee una letra no se le corte el programa
+         menuPrincipal(menu)#lo pasamos a integer para la funcionalidad numerica del programa
+    elif menu == '0':
+        print('Hasta luego muchas gracias por jugar!!!')
+        break
+    else:
+            print('Ingresa la opción correcta')
+        
+
     
